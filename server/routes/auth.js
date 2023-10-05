@@ -13,7 +13,7 @@ const limiter = rateLimit({
   });
   
 
-router.post('/register', register)
+router.post('/register',limiter, register)
 router.post('/login', login)
 
 
